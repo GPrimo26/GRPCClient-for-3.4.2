@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">GRPCClient</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="log_in">Войти</string>
+    <string name="noacc_question">Еще нет аккаунта?</string>
+    <string name="sign_in">Зарегистрироваться</string>
+    <string name="authorization_progress">Авторизация...</string>
+    <string name="loading">Загрузка...</string>
+    <string name="next">Далее</string>
+</resources>

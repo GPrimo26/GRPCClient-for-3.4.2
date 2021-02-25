@@ -1,0 +1,27 @@
+syntax="proto3";
+
+package user_reg;
+
+
+option java_multiple_files = true;
+option java_package = "gprimo.grpc.userreg";
+option java_outer_classname = "UserRegistration";
+option objc_class_prefix = "UR";
+
+
+service Registration{
+  rpc SignIn(SignInRequest) returns(Response);
+}
+
+message SignInRequest{
+  string email=1;
+  string password=2;
+  string phoneNumber=3;
+  string firstName=4;
+  string lastName=5;
+}
+
+message Response{
+  string message=1;
+  int32 code=2;
+}

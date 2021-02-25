@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/authFragment">
+
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.grpc.grpcclient.fragments.auth_reg.AuthFragment"
+        android:label="auth_fragment"
+        tools:layout="@layout/auth_fragment" >
+        <action
+            android:id="@+id/action_authFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_authFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.grpc.grpcclient.fragments.auth_reg.RegistrationFragment"
+        android:label="registration_fragment"
+        tools:layout="@layout/registration_fragment" >
+        <action
+            android:id="@+id/action_registrationFragment_to_authFragment"
+            app:destination="@id/authFragment"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.grpc.grpcclient.fragments.home.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_itemsFragment"
+            app:destination="@id/itemsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_authFragment"
+            app:destination="@id/authFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemsFragment"
+        android:name="com.grpc.grpcclient.fragments.items.ItemsFragment"
+        android:label="ItemsFragment" >
+        <action
+            android:id="@+id/action_itemsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>

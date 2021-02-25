@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimartBackground">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="48dp"
+            android:paddingTop="160dp"
+            android:paddingRight="48dp"
+            tools:context="com.grpc.grpcclient.fragments.auth_reg.AuthFragment">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="Вход"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/login_et"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/edit_text_border_bg"
+                android:ems="10"
+                android:hint="Введите логин"
+                android:inputType="textPersonName"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+            <EditText
+                android:id="@+id/password_et"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/edit_text_border_bg"
+                android:ems="10"
+                android:hint="Введите пароль"
+                android:inputType="textPassword"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/login_et" />
+            <!-- <com.google.android.material.textfield.TextInputLayout
+                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="16dp"
+                 android:layout_marginEnd="16dp"
+                 android:layout_marginBottom="8dp"
+                 android:hint="@string/login"
+                 android:textColorHint="#99000000"
+                 app:boxBackgroundMode="outline"
+                 app:boxCollapsedPaddingTop="1dp"
+                 app:boxStrokeColor="#99000000"
+                 app:expandedHintEnabled="true"
+                 app:hintAnimationEnabled="true"
+                 app:hintEnabled="true"
+                 app:hintTextColor="#99000000">
+
+                 <com.google.android.material.textfield.TextInputEditText
+                     android:id="@+id/email_et"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:backgroundTint="#ffffff"
+                     android:backgroundTintMode="add"
+                     android:cursorVisible="true"
+                     android:textCursorDrawable="@null" />
+             </com.google.android.material.textfield.TextInputLayout>
+
+             <com.google.android.material.textfield.TextInputLayout
+                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="16dp"
+                 android:layout_marginEnd="16dp"
+                 android:layout_marginBottom="8dp"
+                 android:hint="@string/password"
+                 android:textColorHint="#99000000"
+                 app:boxBackgroundMode="outline"
+                 app:boxCollapsedPaddingTop="1dp"
+                 app:boxStrokeColor="#99000000"
+                 app:expandedHintEnabled="true"
+                 app:hintAnimationEnabled="true"
+                 app:hintEnabled="true"
+                 app:hintTextColor="#99000000">
+
+                 <com.google.android.material.textfield.TextInputEditText
+                     android:id="@+id/password_et"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:backgroundTint="#ffffff"
+                     android:backgroundTintMode="add"
+                     android:cursorVisible="true"
+                     android:textCursorDrawable="@null" />
+             </com.google.android.material.textfield.TextInputLayout>
+         -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/login_btn"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:longClickable="true"
+                android:text="@string/log_in"
+                android:textColor="#000000"
+                app:backgroundTint="@color/colorPrimaryDark"
+                app:cornerRadius="48dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="#DE000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/password_et"
+                app:rippleColor="@color/colorPrimaryRipple" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:paddingStart="32dp"
+                android:paddingEnd="32dp">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:text="Еще нет аккаунта?"
+                    app:autoSizeMaxTextSize="24sp"
+                    app:autoSizeMinTextSize="8sp"
+                    app:autoSizeStepGranularity="2sp"
+                    app:autoSizeTextType="uniform" />
+
+                <TextView
+                    android:id="@+id/reg_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:longClickable="true"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:text="@string/sign_in"
+                    android:textColor="#000000"
+                    app:autoSizeMaxTextSize="24sp"
+                    app:autoSizeMinTextSize="10sp"
+                    app:autoSizeStepGranularity="2sp"
+                    app:autoSizeTextType="uniform" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>
