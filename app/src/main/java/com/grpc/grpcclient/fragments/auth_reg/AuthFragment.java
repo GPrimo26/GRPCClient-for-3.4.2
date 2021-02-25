@@ -45,12 +45,6 @@ public class AuthFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.auth_fragment, container, false);
-    }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
         mViewModel = new ViewModelProvider(requireActivity()).get(AuthViewModel.class);
         mViewModel.getUser().observe(getViewLifecycleOwner(), user -> {
             if (mViewModel.getUser().getValue()!=null){
@@ -60,6 +54,7 @@ public class AuthFragment extends Fragment {
                         .navigate(R.id.action_authFragment_to_homeFragment);
             }
         });
+        return inflater.inflate(R.layout.auth_fragment, container, false);
     }
 
     @Override

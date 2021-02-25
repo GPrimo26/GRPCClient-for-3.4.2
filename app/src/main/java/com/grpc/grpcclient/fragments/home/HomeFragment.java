@@ -134,15 +134,14 @@ public class HomeFragment extends Fragment {
     private void setActions(){
         add_fab.setOnClickListener(v->{
             AddBriefcase dialog=new AddBriefcase();
-            if(requireActivity().getSupportFragmentManager()!=null){
-                dialog.setOnDismissClickListener(briefcase -> {
-                    ((MainActivity)requireActivity()).dataBase.mainDao().createBriefcase(briefcase);
-                    briefcases=homeViewModel.getBriefcases(mViewModel.getUser().getValue().getUserId(),
-                            ((MainActivity)requireActivity()).dataBase).getValue();
-                    homeViewModel.setBriefcases(briefcases);
-                });
-                dialog.show(requireActivity().getSupportFragmentManager(), "addBr");
-            }
+            requireActivity().getSupportFragmentManager();
+            dialog.setOnDismissClickListener(briefcase -> {
+                ((MainActivity)requireActivity()).dataBase.mainDao().createBriefcase(briefcase);
+                briefcases=homeViewModel.getBriefcases(mViewModel.getUser().getValue().getUserId(),
+                        ((MainActivity)requireActivity()).dataBase).getValue();
+                homeViewModel.setBriefcases(briefcases);
+            });
+            dialog.show(requireActivity().getSupportFragmentManager(), "addBr");
         });
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
